@@ -15,3 +15,7 @@
     flex-direction: column;
 }
 
+.task-completed {
+    text-decoration: line-through;
+}
+
