@@ -21,15 +21,25 @@ class Tarefa {
         const item = document.createElement("li");
 
         // Define o conteúdo do item da lista de tarefas 
-        item.textContent = `${this.nome}: ${this.descricao} - ${this.data}; ${this.horario}`;
+        const texto = document.createElement("span");
+        texto.textContent = `${this.nome}: ${this.descricao} - ${this.data}; ${this.horario}`;
         
         // Adiciona o item na lista de tarefas
-        lista_tarefas.appendChild(item);
+        item.appendChild(texto);
 
         // Cria checkbox para o item adicionado na lista de tarefas
         const checkbox = document.createElement("input");
         checkbox.type = "checkbox";
+        checkbox.className = "task-checkbox";
         item.appendChild(checkbox);
+
+        // Adiciona evento de selecionar checkbox 
+        checkbox.addEventListener("change", () => {
+            texto.classList.toggle("task-completed", checkbox.checked);
+        });
+
+        // Adiciona item na lista de tarefas
+        lista_tarefas.appendChild(item);
     }
 }
 
@@ -49,7 +59,5 @@ form.addEventListener("submit", (event: SubmitEvent) => {
     // Renderiza novo item na lista de tarefas
     novoItem.renderizar();
 });
-
-
 
 
