@@ -5,6 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>iTask Manager</title>
         <link rel="stylesheet" href="style.css">
+        <script src="app.js" defer></script>
     </head>
     <body>
         <div class="title">
@@ -16,7 +17,7 @@
             <p>Organize suas tarefas de forma eficiente e aumente sua produtividade.</p>
         </div>
 
-        <form>
+        <form id="task-form">
             <div class="task-fields">
                 <div class="input-container">
                     <label for="task">Adicione uma nova tarefa:</label><br>
@@ -37,7 +38,7 @@
         </div>
 
         <div>
-            <ul>
+            <ul id="task-list">
             </ul>
         </div>
     </body>
