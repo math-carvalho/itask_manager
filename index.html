@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>iTask Manager</title>
+        <link rel="stylesheet" href="style.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+        <script src="app.js" defer></script>
+    </head>
+    <body>
+        <header>
+            <div class="header-container">
+                <div>
+                    <img src="images/itask_image.png" alt="Logo da iTask Manager">
+                </div>
+
+                <div class="title">
+                    <h1>iTask Manager</h1>
+                </div>
+            </div>
+
+            <div class="subtitle">
+                <p>Bem-vindo ao iTask Manager!</p>
+                <p>Organize suas tarefas de forma eficiente e aumente sua produtividade.</p>
+            </div>
+        </header>
+
+        <main>
+            <form id="task-form">
+                <div class="task-fields">
+                    <div class="input-container mb-3">
+                        <label for="task form-label" class="form-label">Adicione uma nova tarefa:</label>
+                        <input type="text" class="form-control"id="task" placeholder="Título da tarefa...">
+                    </div>
+
+                    <div class="input-container mb-3">
+                        <label for="task-description" class="form-label">Adicione a descrição da nova tarefa:</label>
+                        <input type="text" class="form-control"id="task-description" placeholder="Descrição da tarefa...">
+                    </div>             
+
+                    <button class="task-button" type="submit">Adicionar</button>
+                </div>
+            </form>
+
+            <div class="title">
+                <h2>Tarefas Adicionadas</h2>
+            </div>
+
+            <div class="list-container">
+                <ul id="task-list">
+                </ul>
+            </div>
+        </main>
+    </body>
+</html>
